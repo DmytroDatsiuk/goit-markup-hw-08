@@ -1,0 +1,35 @@
+.clients {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+  .clients__item {
+    width: 170px;
+    height: 92px;
+  }
+  .clients__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: $logo-color;
+    fill: $logo-color;
+  
+    width: 100%;
+    height: 100%;
+  
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    background-color: $white-background;
+  
+    transition: border-color 250ms $cubic,
+    fill 250ms $cubic;
+  
+  &:hover,
+  &:focus {
+    border-color: $brand-color;
+    fill: $brand-color;
+  }
+}
+.clients__icon {
+    color: currentColor;
+  }

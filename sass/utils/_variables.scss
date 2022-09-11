@@ -1,0 +1,46 @@
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$primary-white-color: #ffffff;
+$brand-color: #2196f3;
+$secondary-brand-color: #188CE8;
+$white-background: #ffffff;
+$secondary-background: #f5f4fa;
+$primary-background: #2f303a;
+$text-rgba: rgba(255, 255, 255, 0.6);
+$logo-color: #afb1b8;
+$logo-bg-color: #43444d;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $primary-text-color;
+    background-color: $white-background;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+.container {
+width: 1200px;
+margin-left: auto;
+margin-right: auto;
+padding: 0 15px;
+}
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
