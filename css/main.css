@@ -350,6 +350,7 @@ summary {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -385,6 +386,7 @@ summary {
   background-color: transparent;
   z-index: 100;
   fill: #000000;
+  cursor: pointer;
 }
 
 .menu-nav__list {
