@@ -1,9 +1,13 @@
 .filter {
     @extend %list;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    // justify-content: center;
     margin-bottom: 50px;
-    gap: 8px;
+    gap: 15px 8px;
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+    }
 }
 .filter__button {
     color: $primary-text-color;

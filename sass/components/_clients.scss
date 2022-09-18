@@ -1,11 +1,29 @@
 .clients {
     @extend %list;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
     gap: 30px;
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 768px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 1200px;
+    }
 }
   .clients__item {
-    width: 170px;
+    width: 210px;
     height: 92px;
+    @media screen and (min-width: $tablet) {
+      width: 226px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 170px;
+    }
   }
   .clients__link {
     display: flex;

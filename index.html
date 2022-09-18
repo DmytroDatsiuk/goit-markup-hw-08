@@ -16,18 +16,95 @@
       <div class="container header__container">
         <nav class="nav">
           <a class="nav__logo" href="./index.html">Web<span class="nav__logo--color">Studio</span></a>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link current">Студія</a>
+          <button 
+            type="button" 
+            class="menu-button" 
+            aria-expanded="false"
+            aria-controls="menu-container"
+            aria-label="Перемикач мобільного меню"
+            js-open-menu
+          >
+            <svg width="40" height="40" class="menu-button__icon">
+              <use href="./img/SVG/icons.svg#menu" class="icon-menu"></use>
+              <!-- <use href="./img/SVG/icons.svg#close" class="icon-close"></use> -->
+            </svg>
+          </button>
+          
+          <div class="menu-container" id="menu-container" js-menu-container>
+            <button 
+            type="button" 
+            class="menu-container__button" 
+            aria-expanded="false"
+            aria-controls="menu-container"
+            aria-label="Перемикач мобільного меню"
+            js-close-menu
+          >
+            <svg width="40" height="40" class="menu-button__icon">
+              <use href="./img/SVG/icons.svg#close" class="icon-close"></use>
+            </svg>
+          </button>
+            <div class="navigation">
+              <ul class="menu-nav__list">
+                <li class="menu-nav__item">
+                  <a href="./index.html" class="menu-nav__link menu-current">Студія</a>
+                </li>
+                <li class="menu-nav__item">
+                  <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
+                </li>
+                <li class="menu-nav__item">
+                  <a href="" class="menu-nav__link">Контакти</a>
+                </li>
+              </ul>
+            </div>
+            
+          <div class="contacts">
+          <ul class="menu-contact">
+            <li class="menu-contact__item">
+              <a href="tel:+380961111111" class="menu-contact__link--tell">
+                +38 096 111 11 11
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link">Портфоліо</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Контакти</a>
+            <li class="menu-contact__item">
+              <a href="mailto:info@devstudio.com" 
+              class="menu-contact__link--mail">
+              info@devstudio.com
+              </a>
             </li>
           </ul>
-        </nav>
+          <ul class="menu-social__list">
+            <li class="menu-social__item">
+              <a href="" class="menu-social__link">
+                Instagram</a>
+            </li>
+            <li class="menu-social__item">
+              <a href="" class="menu-social__link">
+                Twitter
+              </a>
+            </li>
+            <li class="menu-social__item">
+              <a href="" class="menu-social__link">
+                Facebook
+              </a>
+            </li>
+            <li class="menu-social__item">
+              <a href="" class="menu-social__link">
+                 LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link current">Студія</a>
+          </li>
+          <li class="nav__item">
+            <a href="./portfolio.html" class="nav__link">Портфоліо</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">Контакти</a>
+          </li>
+        </ul>
         <ul class="contact">
           <li class="contact__item">
             <a href="mailto:info@devstudio.com" 
@@ -40,14 +117,17 @@
           </li>
           <li class="contact__item">
             <a href="tel:+380961111111" class="contact__link">
-              <svg class="contact__icon" width="10px" height="16px">
+              <svg class="contact__icon" width="12px" height="14px">
                 <use class="icon" href="./img/SVG/icons.svg#phone" ></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
-      </div>
+        </nav>
+        
+          </div>
+          
     </header>
     <main>
     <!-- Hero -->
@@ -117,10 +197,12 @@
             <li class="gallery__item">
               <div class="gallery__thumb">
                 <img
-                  src="./img/Gallery/бокс1.jpg"
+                  srcset="./img/Gallery/gallery-1-370.jpg 1x,
+                  ./img/Gallery/gallery-1-740.jpg 2x,
+                  ./img/Gallery/gallery-1-1110.jpg 3x"
+                  src="./img/Gallery/gallery-1-370.jpg"
                   alt="Мужчина пише код за робочим столом на підключеному моніторі та планшеті"
                   width="370"
-                  height="294"
                   class="gallery__img"
                 />
                 <p class="gallery__text">Десктопні додатки</p>
@@ -129,10 +211,12 @@
             <li class="gallery__item">
               <div class="gallery__thumb">
                 <img
-                  src="./img/Gallery/бокс2.jpg"
+                  srcset="./img/Gallery/gallery-2-370.jpg 1x,
+                  ./img/Gallery/gallery-2-740.jpg 2x,
+                  ./img/Gallery/gallery-2-1110.jpg 3x"
+                  src="./img/Gallery/gallery-2-370.jpg"
                   alt="дівчина синхронізує планшет з ноутбуком"
                   width="370"
-                  height="294"
                   class="gallery__img"
                 />
                 <p class="gallery__text">Мобільні додатки</p>
@@ -141,10 +225,12 @@
             <li class="gallery__item">
               <div class="gallery__thumb">
                 <img
-                  src="./img/Gallery/бокс3.jpg"
+                  srcset="./img/Gallery/gallery-3-370.jpg 1x,
+                  ./img/Gallery/gallery-3-740.jpg 2x,
+                  ./img/Gallery/gallery-3-1110.jpg 3x"
+                  src="./img/Gallery/gallery-3-370.jpg"
                   alt="Дівчина обирає колір на планшеті"
                   width="370"
-                  height="294"
                   class="gallery__img"
                 />
                 <p class="gallery__text">Дизайнерські рішення</p>
@@ -159,7 +245,30 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img class="team__img" src="./img/Team/людина1.jpg" alt="Мужчина" width="270" height="260" />
+              <img class="team__img img-mobile" 
+                srcset="./img/Team/mobile/igor-450.jpg 1x,
+                ./img/Team/mobile/igor-900.jpg 2x,
+                ./img/Team/mobile/igor-1350.jpg 3x"
+                src="./img/Team/mobile/igor-450.jpg" 
+                alt="Мужчина" 
+                width="450" 
+              />
+              <img class="team__img img-tablet" 
+                srcset="./img/Team/tablet/igor-354.jpg 1x,
+                ./img/Team/tablet/igor-708.jpg 2x,
+                ./img/Team/tablet/igor-1062.jpg 3x"
+                src="./img/Team/tablet/igor-354.jpg" 
+                alt="Мужчина" 
+                width="354" 
+              />
+              <img class="team__img img-desktop" 
+                srcset="./img/Team/desktop/igor-270.jpg 1x,
+                ./img/Team/desktop/igor-540.jpg 2x,
+                ./img/Team/desktop/igor-810.jpg 3x"
+                src="./img/Team/desktop/igor-270.jpg" 
+                alt="Мужчина" 
+                width="270" 
+              />
               <div class="position">
                 <h3 class="position__title">Ігор Дем'яненко</h3>
                 <p class="position__text" lang="en">Product Designer</p>
@@ -196,7 +305,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./img/Team/людина2.jpg" alt="Дівчина" width="270" height="260" />
+              <img class="team__img img-mobile" 
+                srcset="./img/Team/mobile/olga-450.jpg 1x,
+                ./img/Team/mobile/olga-900.jpg 2x,
+                ./img/Team/mobile/olga-1350.jpg 3x"
+                src="./img/Team/mobile/olga-450.jpg" 
+                alt="Мужчина" 
+                width="450" 
+              />
+              <img class="team__img img-tablet" 
+                srcset="./img/Team/tablet/olga-354.jpg 1x,
+                ./img/Team/tablet/olga-708.jpg 2x,
+                ./img/Team/tablet/olga-1062.jpg 3x"
+                src="./img/Team/tablet/olga-354.jpg" 
+                alt="Мужчина" 
+                width="450" 
+              />
+              <img class="team__img img-desktop" 
+                srcset="./img/Team/desktop/olga-270.jpg 1x,
+                ./img/Team/desktop/olga-540.jpg 2x,
+                ./img/Team/desktop/olga-810.jpg 3x"
+                src="./img/Team/desktop/olga-270.jpg" 
+                alt="Дівчина" 
+                width="450" 
+              />
               <div class="position">
                 <h3 class="position__title">Ольга Рєпіна</h3>
                 <p class="position__text" lang="en">Frontend Developer</p>
@@ -233,7 +365,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./img/Team/людина3.jpg" alt="Мужчина" width="270" height="260" />
+              <img class="team__img img-mobile" 
+                srcset="./img/Team/mobile/mykola-450.jpg 1x,
+                ./img/Team/mobile/mykola-900.jpg 2x,
+                ./img/Team/mobile/mykola-1350.jpg 3x"
+                src="./img/Team/mobile/mykola-450.jpg" 
+                alt="Мужчина" 
+                width="450" 
+              />
+              <img class="team__img img-tablet" 
+                srcset="./img/Team/tablet/mykola-354.jpg 1x,
+                ./img/Team/tablet/mykola-708.jpg 2x,
+                ./img/Team/tablet/mykola-1062.jpg 3x"
+                src="./img/Team/tablet/mykola-354.jpg" 
+                alt="Мужчина" 
+                width="354" 
+              />
+              <img class="team__img img-desktop" 
+                srcset="./img/Team/desktop/mykola-270.jpg 1x,
+                ./img/Team/desktop/mykola-540.jpg 2x,
+                ./img/Team/desktop/mykola-810.jpg 3x"
+                src="./img/Team/desktop/mykola-270.jpg" 
+                alt="Мужчина" 
+                width="270px"
+              />
               <div class="position">
                 <h3 class="position__title">Микола Тарасов</h3>
                 <p class="position__text" lang="en">Marketing</p>
@@ -270,7 +425,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./img/Team/людина4.jpg" alt="Мужчина" width="270" height="260" />
+              <img class="team__img img-mobile" 
+                srcset="./img/Team/mobile/michael-450.jpg 1x,
+                ./img/Team/mobile/michael-900.jpg 2x,
+                ./img/Team/mobile/michael-1350.jpg 3x"
+                src="./img/Team/mobile/michael-450.jpg" 
+                alt="Мужчина" 
+                width="450" 
+              />
+              <img class="team__img img-tablet" 
+                srcset="./img/Team/tablet/michael-354.jpg 1x,
+                ./img/Team/tablet/michael-708.jpg 2x,
+                ./img/Team/tablet/michael-1062.jpg 3x"
+                src="./img/Team/tablet/michael-354.jpg" 
+                alt="Мужчина" 
+                width="354" 
+              />
+              <img class="team__img img-desktop" 
+                srcset="./img/Team/desktop/michael-270.jpg 1x,
+                ./img/Team/desktop/michael-540.jpg 2x,
+                ./img/Team/desktop/michael-810.jpg 3x"
+                src="./img/Team/desktop/michael-270.jpg" 
+                alt="Мужчина" 
+                width="270" 
+              />
               <div class="position">
                 <h3 class="position__title">Михайло Єрмаков</h3>
                 <p class="position__text" lang="en">UI Designer</p>
@@ -481,6 +659,8 @@
           </form>
       </div>
     </div>
+    
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

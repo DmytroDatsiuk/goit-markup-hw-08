@@ -1,27 +1,165 @@
 .header {
     border-bottom: 1px solid #ececec;
+    position: relative;
 
     &__container {
-        display: flex;
-        align-items: center; 
+        
+        display: block;
     }
 }
 .nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    
 }
     .nav__logo {
         @extend %logo;
+        padding-top: 25px;
+        padding-bottom: 25px;
     
     &--color {
         color: #000000;
     }
 }
-    .nav__list {
+.menu-button {
+    display: inline-flex;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    z-index: 10;
+
+    background-color: $white-background;
+    padding: 40px;
+    // text-align: center;
+    font-size: 20px;
+
+    &.is-open {
+        display: block;
+    }
+}
+    .menu-container__button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        display: inline-flex;
+        border: none;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        z-index: 100;
+        fill: #000000
+    }
+    .menu-nav__list {
+        @extend %list;
+        margin-bottom: 302px;
+    }
+    .menu-nav__item {
+        margin-bottom: 32px;
+    }
+    .menu-nav__link {
+        color: $primary-text-color;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: calc(47 / 40);
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        text-decoration: none;
+    }
+    .menu-current {
+        color: $brand-color;
+    }
+    .menu-contact {
+        @extend %list;
+        margin-bottom: 64px;
+    }
+    .menu-contact__item {
+        margin-bottom: 32px;
+    }
+    .menu-contact__link--tell {
+        color: $brand-color;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: calc(40 / 34);
+        letter-spacing: 0.02em;
+        text-decoration: none;
+    }
+    .menu-contact__link--mail {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: calc(28 / 24);
+        letter-spacing: 0.02em;
+        color: $secondary-text-color;
+        text-decoration: none;
+    }
+    .menu-social__list {
         @extend %list;
         display: flex;
-        margin-left: 93px;
-        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .menu-social__item {
+        display: block;
+        margin-right: 20px;
+        position: relative;
+    }
+    .menu-social__item::before {
+        display: inline-block;
+            position: absolute;
+            right: -12px;
+          
+            content: '\007C';
+            color: rgba(33, 33, 33, 0.2);
+          
+          
+          
+    }
+    .menu-social__item:last-child::before {
+     
+        content: '';     
+}
+    .menu-social__link {
+        color: $brand-color;
+        // position: relative;
+        text-decoration: none;
+        
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        letter-spacing: 0.02em;
+
+        
+    }
+
+
+
+
+    .nav__list {
+        @extend %list;
+        display: none;
+        
+        
+        @media screen and (min-width: $tablet) {
+            display: flex;  
+            gap: 50px;
+            margin-left: 87px;
+          }
+          @media screen and (min-width: $desktop) {
+            margin-left: 93px;
+          }
     }
     
     
@@ -63,20 +201,31 @@
       }
   }
   .contact {
+    display: none;
     @extend %list;
-    display: flex;
+    // display: flex;
     margin-left: auto;
-    gap: 50px;
+    // gap: 30px;
+    @media screen and (min-width: $tablet) {
+        display: block;  
+        
+      }
+    @media screen and (min-width: $desktop) {
+        display: flex;  
+        gap: 30px;
+      }
+
 
     &__icon {
+        display: inline-flex;
         margin-right: 10px;
         }
     }
     .contact__link {
         display: flex;
         padding: 0;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         margin: 0;
         color: $secondary-text-color;
         align-items: center;
@@ -90,6 +239,11 @@
       
         transition: color 250ms $cubic,
         fill 250ms $cubic; 
+
+        @media screen and (min-width: $desktop) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+          }
 
         &:hover,
         &:focus {
