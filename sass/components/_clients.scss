@@ -5,9 +5,7 @@
     flex-wrap: wrap;
     
     gap: 30px;
-    // @media screen and (min-width: $mobile) {
-    //   width: 450px;
-    // }
+   
    
     // @media screen and (min-width: $desktop) {
     //   width: 1200px;
@@ -16,11 +14,16 @@
   .clients__item {
     // width: 210px;
     // height: 92px;
-    
-   
+    flex-basis: calc((100% - 30px) /2);
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 150px) / 6);
+    }
   }
   .clients__link {
-    padding: 15px 51px;
+    // padding: 15px 51px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,12 +40,12 @@
     transition: border-color 250ms $cubic,
     fill 250ms $cubic;
 
-    @media screen and (min-width: $tablet) {
-      padding: 15px 59px;
-    }
-     @media screen and (min-width: $desktop) {
-      padding: 15px 31px;
-    }
+    // @media screen and (min-width: $tablet) {
+    //   padding: 15px 59px;
+    // }
+    //  @media screen and (min-width: $desktop) {
+    //   padding: 15px 31px;
+    // }
   
   &:hover,
   &:focus {

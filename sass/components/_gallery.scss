@@ -5,6 +5,9 @@
     gap: 30px;
     
 }
+.gallery__item {
+    width: calc((100% - 60px) / 3);
+}
     .gallery__img {
         display: block;
         height: auto;

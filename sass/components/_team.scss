@@ -22,15 +22,16 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: $primary-white-color;
     border-radius: 0px 0px 4px 4px;
+    // width: calc((100% - 30px) / );
     // @media screen and (min-width: $mobile) {
     //   width: 450px;
     // }
-    // @media screen and (min-width: $tablet) {
-    //   width: calc((100% - 30px) / 2);
-    // }
-    // @media screen and (min-width: $desktop) {
-    //   width: 270px;
-    // }
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 4);
+    }
     &:not(:last-child) {
       @media screen and (max-width: 767px) {
       margin-bottom: 30px;
