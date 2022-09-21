@@ -8,6 +8,8 @@
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
     }
     @media screen and (min-width: $desktop) {
       text-align: left;
@@ -23,16 +25,12 @@
   }
   }
   .footer__contact {
-    // margin-right: 70px;
     margin-bottom: 60px;
+
     @media screen and (min-width: $tablet) {
-      margin-right: auto;
-      margin-left: 60px;
+      margin-bottom: 0;
     }
-    @media screen and (min-width: $desktop) {
-      margin-left: 0;
-      margin-right: 70px;
-    }
+  
   }
   
   
@@ -41,7 +39,9 @@
 }
     .address__list {
         @extend %list;
-        gap: 9px;
+    }
+    .address__item:not(:last-child) {
+      margin-bottom: 9px;
     }
 .address__link {
     color: $primary-white-color;
@@ -71,14 +71,8 @@
   }
 }
   .footer-social {
-    margin-bottom: 60px;
-    @media screen and (min-width: $tablet) {
-      margin-left: auto;
-      margin-right: 60px;
-    }
     @media screen and (min-width: $desktop) {
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: 70px;
     }
   }
   .footer-social__title {
@@ -122,12 +116,12 @@
     fill: $primary-white-color;
   }
 .follow {
-  
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
   @media screen and (min-width: $desktop) {
+    margin-top: 0;
     margin-right: 0;
-    margin-left: auto;
 }
 }
   .follow__box {

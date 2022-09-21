@@ -3,10 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     // justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     gap: 15px 8px;
     @media screen and (min-width: $tablet) {
+      margin-bottom: 30px;
       justify-content: center;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
     }
 }
 .filter__button {
