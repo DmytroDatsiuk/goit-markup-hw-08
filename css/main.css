@@ -950,6 +950,7 @@ summary {
 }
 
 .clients__item {
+  height: 92px;
   -ms-flex-preferred-size: calc((100% - 30px) / 2);
       flex-basis: calc((100% - 30px) / 2);
 }
