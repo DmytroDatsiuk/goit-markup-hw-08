@@ -12,16 +12,9 @@
     line-height: calc(33 / 28);
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 30px;
   
-    @media screen and (min-width: $mobile) {
-      
-      margin-bottom: 30px;
-      
-    }
-    @media screen and (min-width: $tablet) {
-      
-      margin-bottom: 30px;
-    }
+    
     @media screen and (min-width: $desktop) {
       
       margin-bottom: 50px;
